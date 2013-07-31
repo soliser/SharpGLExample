@@ -140,6 +140,7 @@
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Red";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
@@ -149,6 +150,7 @@
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Green";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
@@ -158,6 +160,7 @@
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Blue";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel1
             // 
@@ -184,7 +187,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(195, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(256, 200);
+            this.panel2.Size = new System.Drawing.Size(256, 204);
             this.panel2.TabIndex = 12;
             // 
             // trackBar8
@@ -208,6 +211,7 @@
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "Size";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar4
             // 
@@ -224,11 +228,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 101);
+            this.label4.Location = new System.Drawing.Point(24, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Blue";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar5
             // 
@@ -244,11 +249,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 56);
+            this.label5.Location = new System.Drawing.Point(25, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Green";
+            this.label5.Text = "Red";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar6
             // 
@@ -264,11 +270,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 8);
+            this.label6.Location = new System.Drawing.Point(16, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Red";
+            this.label6.Text = "Green";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tabControl1
             // 
@@ -315,20 +322,22 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 245);
+            this.label13.Location = new System.Drawing.Point(8, 245);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 18;
             this.label13.Text = "z Depth";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 197);
+            this.label12.Location = new System.Drawing.Point(9, 197);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 13);
             this.label12.TabIndex = 17;
             this.label12.Text = "x Width";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar13
             // 
@@ -352,6 +361,7 @@
             this.trackBar12.SmallChange = 5;
             this.trackBar12.TabIndex = 15;
             this.trackBar12.TickFrequency = 500;
+            this.trackBar12.Value = 5;
             this.trackBar12.Scroll += new System.EventHandler(this.trackBar12_Scroll);
             // 
             // trackBar9
@@ -369,11 +379,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 149);
+            this.label7.Location = new System.Drawing.Point(6, 149);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "y Height";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar7
             // 
@@ -397,6 +408,7 @@
             this.label9.Size = new System.Drawing.Size(28, 13);
             this.label9.TabIndex = 10;
             this.label9.Text = "Blue";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar10
             // 
@@ -412,11 +424,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 56);
+            this.label10.Location = new System.Drawing.Point(25, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 13);
+            this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Green";
+            this.label10.Text = "Red";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // trackBar11
             // 
@@ -432,11 +445,12 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 8);
+            this.label11.Location = new System.Drawing.Point(16, 56);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 13);
+            this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Red";
+            this.label11.Text = "Green";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tabPage2
             // 

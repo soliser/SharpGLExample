@@ -224,65 +224,78 @@ namespace SharpGLExample
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             _bgRed = (float)trackBar1.Value / 100;
+            label1.Text = "Red \n" + _bgRed;
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             _bgGreen = (float)trackBar2.Value / 100;
+            label2.Text = "Green \n" + _bgGreen;
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            _bgBlue = (float)trackBar3.Value/100;
+            _bgBlue = (float)trackBar3.Value / 100;
+            label3.Text = "Blue \n" + _bgBlue;
         }
         
         private void trackBar5_Scroll(object sender, EventArgs e)
         {
             _shapeRed = (float)trackBar5.Value / 100;
+            label5.Text = "Red \n" + _shapeRed;
         }
 
         private void trackBar6_Scroll(object sender, EventArgs e)
         {
             _shapeGreen = (float)trackBar6.Value / 100;
+            label6.Text = "Green \n" + _shapeGreen;
         }
 
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
             _shapeBlue = (float)trackBar4.Value / 100;
+            label4.Text = "Blue \n" + _shapeBlue;
         }
 
         private void trackBar7_Scroll(object sender, EventArgs e)
         {
-            _planeYHeight = (float)trackBar7.Value / 100; 
+            _planeYHeight = (float)trackBar7.Value / 100;
+            label7.Text = "y Height \n" + _planeYHeight;
         }  
 
         private void trackBar8_Scroll(object sender, EventArgs e)
         {
             _shapeSize = (float) trackBar8.Value/1000;
+            label8.Text = "Size \n" + _shapeSize;
         }
 
         private void trackBar10_Scroll(object sender, EventArgs e)
         {
             _planeRed = (float)trackBar10.Value / 100;
+            label10.Text = "Red \n" + _planeRed;
         }
 
         private void trackBar11_Scroll(object sender, EventArgs e)
         {
             _planeGreen = (float)trackBar11.Value / 100;
+            label11.Text = "Green \n" + _planeGreen;
         }
 
         private void trackBar9_Scroll(object sender, EventArgs e)
         {
             _planeBlue = (float)trackBar9.Value / 100;
+            label9.Text = "Blue \n" + _planeBlue;
         }
         private void trackBar12_Scroll(object sender, EventArgs e)
         {
             _planeXWidth = (float) trackBar12.Value/5000;
+            label12.Text = "x Width \n" + _planeXWidth;
         }
 
         private void trackBar13_Scroll(object sender, EventArgs e)
         {
             _planeZDepth = (float)trackBar13.Value / 5000;
+            label13.Text = "z Depth \n" + _planeZDepth;
         }     
         private float _bgRed = 0;
         private float _bgGreen = 0;
