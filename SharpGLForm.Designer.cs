@@ -61,6 +61,8 @@
             this.trackBar11 = new System.Windows.Forms.TrackBar();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.trackBar14 = new System.Windows.Forms.TrackBar();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -81,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).BeginInit();
             this.SuspendLayout();
             // 
             // openGLControl
@@ -164,6 +167,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.trackBar14);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.trackBar3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.trackBar1);
@@ -172,7 +177,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(10, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 153);
+            this.panel1.Size = new System.Drawing.Size(224, 191);
             this.panel1.TabIndex = 11;
             // 
             // panel2
@@ -194,12 +199,11 @@
             // 
             this.trackBar8.LargeChange = 1;
             this.trackBar8.Location = new System.Drawing.Point(58, 149);
-            this.trackBar8.Maximum = 100;
-            this.trackBar8.Minimum = 1;
+            this.trackBar8.Maximum = 1000;
             this.trackBar8.Name = "trackBar8";
             this.trackBar8.Size = new System.Drawing.Size(159, 42);
             this.trackBar8.TabIndex = 14;
-            this.trackBar8.TickFrequency = 5;
+            this.trackBar8.TickFrequency = 50;
             this.trackBar8.Value = 1;
             this.trackBar8.Scroll += new System.EventHandler(this.trackBar8_Scroll);
             // 
@@ -463,6 +467,28 @@
             this.tabPage2.Text = "Shape";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // trackBar14
+            // 
+            this.trackBar14.LargeChange = 10;
+            this.trackBar14.Location = new System.Drawing.Point(58, 146);
+            this.trackBar14.Maximum = 1000;
+            this.trackBar14.Name = "trackBar14";
+            this.trackBar14.Size = new System.Drawing.Size(159, 42);
+            this.trackBar14.SmallChange = 5;
+            this.trackBar14.TabIndex = 11;
+            this.trackBar14.TickFrequency = 50;
+            this.trackBar14.Scroll += new System.EventHandler(this.trackBar14_Scroll);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 146);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Rotation";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // SharpGLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,6 +521,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,6 +562,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TrackBar trackBar13;
         private System.Windows.Forms.TrackBar trackBar12;
+        private System.Windows.Forms.TrackBar trackBar14;
+        private System.Windows.Forms.Label label14;
     }
 }
 

@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using SharpGL;
 
@@ -43,130 +37,16 @@ namespace SharpGLExample
             gl.Rotate(rotation, 0.0f, 1.0f, 0.0f);
 
             //  Draw a coloured pyramid.
-            addTriangle(gl);
+            Shapes.AddTriangle(gl,_shapeRed,_shapeGreen,_shapeBlue,_shapeSize);
             //addCube(gl);
 
-            addPlane(gl);
+            Shapes.AddPlane(gl,_planeRed,_planeGreen,_planeBlue,_planeXWidth,_planeYHeight,_planeZDepth);
 
             //update the backgroud color using sliders
             gl.ClearColor(_bgRed, _bgGreen, _bgBlue, 0);
 
             //  Nudge the rotation.
-            rotation += 2.0f;
-        }
-
-        //draw plane
-        private void addPlane(OpenGL gl)
-        {
-            gl.Begin(OpenGL.GL_QUADS);
-            gl.Color(_planeRed, _planeGreen, _planeBlue);
-            gl.Vertex(-_planeXWidth, _planeYHeight, -_planeZDepth);
-            gl.Vertex(-_planeXWidth, _planeYHeight, _planeZDepth);
-            gl.Vertex(_planeXWidth, _planeYHeight, _planeZDepth);
-            gl.Vertex(_planeXWidth, _planeYHeight, -_planeZDepth);
-            gl.End();
-        }
-
-
-        //Draw a Triangle
-        private void addTriangleMultiColor(OpenGL gl)
-        {
-            gl.Begin(OpenGL.GL_TRIANGLES);
-            gl.Color(1.0f, 0.0f, 0.0f);
-            gl.Vertex(0.0f, 1.0f, 0.0f);
-            gl.Color(0.0f, 1.0f, 0.0f);
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
-            gl.Color(0.0f, 0.0f, 1.0f);
-            gl.Vertex(1.0f, -1.0f, 1.0f);
-            gl.Color(1.0f, 0.0f, 0.0f);
-            gl.Vertex(0.0f, 1.0f, 0.0f);
-            gl.Color(0.0f, 0.0f, 1.0f);
-            gl.Vertex(1.0f, -1.0f, 1.0f);
-            gl.Color(0.0f, 1.0f, 0.0f);
-            gl.Vertex(1.0f, -1.0f, -1.0f);
-            gl.Color(1.0f, 0.0f, 0.0f);
-            gl.Vertex(0.0f, 1.0f, 0.0f);
-            gl.Color(0.0f, 1.0f, 0.0f);
-            gl.Vertex(1.0f, -1.0f, -1.0f);
-            gl.Color(0.0f, 0.0f, 1.0f);
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
-            gl.Color(1.0f, 0.0f, 0.0f);
-            gl.Vertex(0.0f, 1.0f, 0.0f);
-            gl.Color(0.0f, 0.0f, 1.0f);
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
-            gl.Color(0.0f, 1.0f, 0.0f);
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
-            gl.End();
-        }
-
-        //Draw a Cube
-        private void addCube(OpenGL gl)
-        {
-            gl.Begin(OpenGL.GL_QUADS);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            // front
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            // back
-            gl.Vertex(_shapeSize, -_shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, -_shapeSize, _shapeSize);
-            // right
-            gl.Vertex(_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, -_shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, -_shapeSize, _shapeSize);
-            // left
-            gl.Vertex(-_shapeSize, -_shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, _shapeSize, -_shapeSize);
-            gl.Vertex(-_shapeSize, -_shapeSize, -_shapeSize);
-            // top
-            gl.Vertex(_shapeSize, _shapeSize, _shapeSize);
-            gl.Vertex(_shapeSize, _shapeSize, -_shapeSize);
-            gl.Vertex(-_shapeSize, _shapeSize, -_shapeSize);
-            gl.Vertex(-_shapeSize, _shapeSize, _shapeSize);
-            // bottom
-            gl.Vertex(_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Vertex(_shapeSize, -_shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, -_shapeSize, _shapeSize);
-            gl.Vertex(-_shapeSize, -_shapeSize, -_shapeSize);
-            gl.End();
-        }
-
-
-        //Draw a Triangle
-        private void addTriangle(OpenGL gl)
-        {
-            gl.Begin(OpenGL.GL_TRIANGLES);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(0.0f, _shapeSize, 0.0f);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(-_shapeSize, -_shapeSize, _shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(_shapeSize, -_shapeSize, _shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(0.0f, _shapeSize, 0.0f);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(_shapeSize, -_shapeSize, _shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(0.0f, _shapeSize, 0.0f);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(-_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(0.0f, _shapeSize, 0.0f);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(-_shapeSize, -_shapeSize, -_shapeSize);
-            gl.Color(_shapeRed, _shapeGreen, _shapeBlue);
-            gl.Vertex(-_shapeSize, -_shapeSize, _shapeSize);
-            gl.End();
+            rotation += _rotation;
         }
 
         /// <summary>
@@ -209,7 +89,7 @@ namespace SharpGLExample
 
             //  Use the 'look at' helper function to position and aim the camera.
             //gl.LookAt(-10, 5, -10, 0, 0, 0, 0, 1, 0);
-            gl.LookAt(0, 10, 10, 0, 0, 0, 0, 1, 0);
+            gl.LookAt(0, 2, 20, 0, 0, 0, 0, 1, 0);
 
             //  Set the modelview matrix.
             gl.MatrixMode(OpenGL.GL_MODELVIEW);
@@ -296,7 +176,13 @@ namespace SharpGLExample
         {
             _planeZDepth = (float)trackBar13.Value / 5000;
             label13.Text = "z Depth \n" + _planeZDepth;
-        }     
+        } 
+        private void trackBar14_Scroll(object sender, EventArgs e)
+        {
+            _rotation = (float)trackBar14.Value / 100;
+            label13.Text = "Rotation \n" + _planeZDepth;
+        }
+    
         private float _bgRed = 0;
         private float _bgGreen = 0;
         private float _bgBlue = 0;
@@ -310,7 +196,6 @@ namespace SharpGLExample
         private float _planeRed = 0;
         private float _planeGreen = 0;
         private float _planeBlue;
-
-
+        private float _rotation;
     }
 }
